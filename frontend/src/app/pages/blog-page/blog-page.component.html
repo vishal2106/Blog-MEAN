@@ -1,0 +1,34 @@
+<div class="centered-content">
+    <div class="blog-container">
+
+        <div class="sidebar has-background-white">
+            <h1 class="title has-text-primary">
+                Blogs
+            </h1>
+
+            <div class="blog-menu">
+                <a class="blog-menu-item" *ngFor="let blog of blogs" [routerLink]="['/blogs', blog._id]" routerLinkActive="is-active">
+                    <p>{{ blog.title }}</p>
+                </a>
+            </div>
+
+            <button class="button is-primary has-text-white" routerLink="/new_blog">
+                + New Blog
+            </button>
+
+        </div>
+
+        <div class="blog-description-container has-background-light">
+            <h1 class="title has-text-primary">
+                Description
+            </h1>
+
+            <!-- Blog Description -->
+            <div class="description" [routerLink]="['blogs', selectedBlog._id, 'edit']">
+                <p>{{ selectedBlog.description }}</p>
+            </div>
+
+        </div>
+
+    </div>
+</div>

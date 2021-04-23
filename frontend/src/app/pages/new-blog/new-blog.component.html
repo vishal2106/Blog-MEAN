@@ -1,0 +1,18 @@
+<div class="centered-content">
+    <div class="modal-box">
+      <h1 class="title">
+        Create a new blog
+      </h1>
+  
+      <input #blogTitleInput class="input has-background-light is-medium" type="text" placeholder="Enter blog title...">
+      <br><br>
+      <input #blogDescriptionInput class="input has-background-light is-medium" type="text" style="height:150px; width:100%" placeholder="Enter blog description...">
+      <br><br>
+      <div class="buttons is-right">
+        <button class="button is-medium" routerLink="/">Cancel</button>
+        <button class="button is-primary has-text-white is-medium" (click)="createNewBlog(blogTitleInput.value, blogDescriptionInput.value)">Create</button>
+      </div>
+  
+      
+    </div>
+  </div>
