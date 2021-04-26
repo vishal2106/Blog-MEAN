@@ -15,7 +15,7 @@ export class BlogPageComponent implements OnInit {
 
   selectedBlogId!: string;
 
-  constructor(private blogService: BlogService, private route: ActivatedRoute) { }
+  constructor(private blogService: BlogService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -31,5 +31,14 @@ export class BlogPageComponent implements OnInit {
       this.blogService.getBlogs().subscribe((response: any) => {
         this.blogs = response;
       })
+  }
+
+  deleteBlog(){
+    console.log('Inside fn')
+    this.blogService.deleteBlog(this.selectedBlogId).subscribe((res:any)=>{
+      console.log(res)
+      this.router.navigateByUrl('/')
+    })
+    
   }
 }

@@ -22,10 +22,11 @@ export class BlogService {
   }
 
   updateBlog(blogId: string, title: string, description: string) {
-    return this.webReqService.patch(`blogs/${blogId}`, { title, description });
+    return this.webReqService.put(`blogs/${blogId}`, { title, description });
   }
 
   deleteBlog(blogId: string) {
+    console.log('inside service')
     return this.webReqService.delete(`blogs/${blogId}`);
   }
 

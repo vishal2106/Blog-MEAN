@@ -1,3 +1,31 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" [routerLink]="['/']">
+       <strong > Blog Page</strong>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" [routerLink]="['/']">
+          Home
+        </a>  
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary" [routerLink]="['/signup']">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light" [routerLink]="['/login']">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 <div class="centered-content">
     <div class="blog-container">
 
@@ -6,15 +34,16 @@
                 Blogs
             </h1>
 
-            <div class="blog-menu">
-                <a class="blog-menu-item" *ngFor="let blog of blogs" [routerLink]="['/blogs', blog._id]">
-                    <p>{{ blog.title }}</p>
-                </a>
-            </div>
-
             <button class="button is-primary has-text-white" routerLink="/new_blog">
                 + New Blog
             </button>
+
+            <div class="blog-menu">
+                <a class="blog-menu-item" *ngFor="let blog of blogs" [routerLink]="['/blogs', blog._id]">
+                    <p class="text-wrap">{{ blog.title }}</p>
+                </a>
+            </div>
+
 
         </div>
 
@@ -22,6 +51,8 @@
             <h1 class="title has-text-primary">
                 Welcome
             </h1>
+            <p class="title">Welcome to Blog page, scroll sidebar to read blogs or create your own blog!</p>
+            <img src="https://sociology.ucsd.edu/_images/buttons/blog-ico.png">
 
         </div>
 

@@ -25,12 +25,32 @@ post(uri: string, payload: Object) {
   return this.http.post(`${this.ROOT_URL}/${uri}`, payload);
 }
 
-patch(uri: string, payload: Object) {
-  return this.http.patch(`${this.ROOT_URL}/${uri}`, payload);
+put(uri: string, payload: Object) {
+  return this.http.put(`${this.ROOT_URL}/${uri}`, payload);
 }
 
 delete(uri: string) {
+  console.log('Inside web service')
   return this.http.delete(`${this.ROOT_URL}/${uri}`);
 }
+
+login(email: string, password: string) {
+  return this.http.post(`${this.ROOT_URL}/users/login`, {
+    email,
+    password
+  }, {
+      observe: 'response'
+    });
+}
+
+signup(email: string, password: string) {
+  return this.http.post(`${this.ROOT_URL}/users`, {
+    email,
+    password
+  }, {
+      observe: 'response'
+    });
+}
+
 
 }
