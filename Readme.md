@@ -5,6 +5,7 @@ A blogging app using MEAN stack
 ### Tech - MEAN stack
 
 ![MEAN](/images/mean.png)
+![Docker](/images/docker.jpg)
 
 ### Try it out
 
