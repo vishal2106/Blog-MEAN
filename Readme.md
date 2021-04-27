@@ -20,3 +20,10 @@ $ # this will build and run 2 services-frontend(angular), backend(node)
 - Complete the ongoing login/signup functionality
 - Deploy app to cloud platform
 - Protect routes for user specific functions
+
+### Screenshots
+![Screenshot](/images/ss-1.png)
+![Screenshot](/images/ss-2.png)
+![Screenshot](/images/ss-3.png)
+![Screenshot](/images/ss-4.png)
+![Screenshot](/images/ss-5.png)
