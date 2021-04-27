@@ -2,11 +2,9 @@
 
 A blogging app using MEAN stack
 
-# [Heroku link for live version]()
-
 ### Tech - MEAN stack
 
-- ![MEAN](/images/mean.png)
+![MEAN](/images/mean.png)
 
 ### Try it out
 
@@ -17,3 +15,8 @@ $ $ docker-compose up
 $ # this will build and run 2 services-frontend(angular), backend(node)
 ```
 ### Go to localhost:9000 to try out the app
+
+### TODO
+- Complete the ongoing login/signup functionality
+- Deploy app to cloud platform
+- Protect routes for user specific functions
