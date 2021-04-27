@@ -14,6 +14,7 @@ export class EditBlogComponent implements OnInit {
 
   blogId!: string;
 
+  // Update blogID with change on parameter
   ngOnInit(): void {
     this.route.params.subscribe(
       (params: Params) => {
@@ -22,6 +23,7 @@ export class EditBlogComponent implements OnInit {
     )
   }
 
+  // Method to edit a blog by calling blogService.updateBlog
   editBlog(title: string, description: string) {
     this.blogService.updateBlog(this.blogId, title, description).subscribe((blog: any)=>{
       console.log(blog)

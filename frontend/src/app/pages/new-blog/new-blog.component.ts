@@ -14,6 +14,8 @@ export class NewBlogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  // Create new blog by calling blogService.createBlog
   createNewBlog(title: string, description: string) {
     this.blogService.createBlog(title, description).subscribe((blog: any)=>{
       console.log(blog)

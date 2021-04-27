@@ -90,18 +90,31 @@ let verifySession = (req, res, next) => {
     })
 }
 
+
+// Data routes
+
+/*
+* GET all blogs
+*/
 app.get('/blogs', (req, res)=>{
     Blog.find({}).then((blogs)=>{
         res.send(blogs)
     })
 })
 
+
+/*
+* GET blog of specific id
+*/
 app.get('/blogs/:id', (req, res)=>{
     Blog.findOne({_id: req.params.id}).then((blog)=>{
         res.send(blog)
     })
 })
 
+/*
+* POST a new blog
+*/
 app.post('/blogs', (req, res)=>{
     let title = req.body.title;
     let description = req.body.description;
@@ -114,6 +127,9 @@ app.post('/blogs', (req, res)=>{
     })
 })
 
+/*
+* UPDATE an exisiting blog using id
+*/
 app.put('/blogs/:id', (req, res)=>{
     Blog.findOneAndUpdate({_id: req.params.id}, {
         $set: req.body
@@ -122,6 +138,9 @@ app.put('/blogs/:id', (req, res)=>{
     })
 })
 
+/*
+* DELETE a blog
+*/
 app.delete('/blogs/:id', (req, res)=>{
     Blog.findOneAndDelete({_id: req.params.id}).then((blog)=>{
         res.send(blog)

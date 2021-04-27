@@ -8,6 +8,10 @@ export class BlogService {
 
   constructor(private webReqService: WebRequestService) { }
 
+  /*
+  * Wrapper service around web-req-service for CRUD on blog service
+  */
+
   getBlogs(){
     return this.webReqService.get('blogs');
   }

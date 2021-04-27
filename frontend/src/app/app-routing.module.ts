@@ -7,6 +7,8 @@ import { NewBlogComponent } from './pages/new-blog/new-blog.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { WelcomePageComponent } from './pages/welcome-page/welcome-page.component';
 
+
+// Frontend routes
 const routes: Routes = [
   {path: '', component:WelcomePageComponent },
   {path: 'login', component:LoginPageComponent},

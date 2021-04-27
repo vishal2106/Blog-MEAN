@@ -15,6 +15,7 @@ export class LoginPageComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Login user when email, pass match
   onLoginButtonClicked(email: string, password: string) {
     this.authService.login(email, password).subscribe((res: HttpResponse<any>) => {
       if (res.status === 200) {

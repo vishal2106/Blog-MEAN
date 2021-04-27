@@ -17,6 +17,7 @@ export class WelcomePageComponent implements OnInit {
 
   constructor(private blogService: BlogService, private route: ActivatedRoute) { }
 
+  // Update welcome page with the title of the blogs
   ngOnInit(): void {
         this.blogService.getBlogs().subscribe((response: any) => {
           this.blogs = response;

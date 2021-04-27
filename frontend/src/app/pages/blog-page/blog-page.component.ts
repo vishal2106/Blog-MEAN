@@ -17,6 +17,8 @@ export class BlogPageComponent implements OnInit {
 
   constructor(private blogService: BlogService, private route: ActivatedRoute, private router: Router) { }
 
+
+  // On initialize of component subscribe to change on params and update blogs value
   ngOnInit(): void {
     this.route.params.subscribe(
       (params: Params) => {
@@ -33,6 +35,7 @@ export class BlogPageComponent implements OnInit {
       })
   }
 
+  // Method to delete a blog by calling blogService
   deleteBlog(){
     console.log('Inside fn')
     this.blogService.deleteBlog(this.selectedBlogId).subscribe((res:any)=>{

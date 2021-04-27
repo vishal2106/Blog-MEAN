@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 const slugify = require('slugify')
 
+
+// BLOG schema
+// Title, Description, Created at
 const blogSchema = new mongoose.Schema({
   title: {
     type: String,
